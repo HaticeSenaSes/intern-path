@@ -1,34 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Empatist | YGA Akademi",
-  description:
-    "Teknik terimleri çocukların bile anlayacağı kadar sade ve ilham verici bir dille açıklar.",
+  title: "Intern Path | Staj Takip",
+  description: "Teknik terimleri sade ve ilham verici bir dille açıklar.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html
-      lang="tr"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="flex min-h-dvh flex-col font-sans">{children}</body>
+    <html lang="tr" className="h-full antialiased">
+      <body className="flex min-h-dvh flex-col font-sans">
+        {children}
+      </body>
     </html>
   );
 }
