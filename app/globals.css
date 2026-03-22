@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --background: #ffffff;
@@ -10,4 +8,7 @@
 body {
   background: white;
   color: black;
+  font-family: sans-serif;
 }
+
+/* Animasyonları şimdilik ekleme, önce ekranın düzeldiğini görelim. */
